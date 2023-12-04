@@ -3,7 +3,7 @@ import os
 import requests
 from art import tprint
 
-tprint("AUTOR: ALYX")
+tprint("AUTHOR: ALYX")
 N = int(input("Сколько задач хотите решить:   "))
 
 
@@ -15,8 +15,8 @@ def CreatbyPrefers():
     soup = BeautifulSoup(responce.text, "lxml")
     issueSoup = soup.find_all("p", class_="left_margin")
     issue = ''
-    for i in issueSoup:
-        issue += i.text.replace("­", "")
+    for char in issueSoup:
+        issue += char.text.replace("­", "")
 
     Number_NumberTest = 1
     while True:
